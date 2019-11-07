@@ -1,0 +1,35 @@
+{
+    "name": "infyomlabs/mail",
+    "description": "Test Local Package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mitul Golakiya",
+            "email": "me@mitul.me"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "illuminate/support": "~5.0|^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "InfyOm\\Mail\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\InfyOm\\Mail\\MailServiceProvider"
+            ],
+            "aliases": {
+                "Mail": "InfyOm\\Mail\\InfyOmMail"
+            }
+        }
+    }
+}
